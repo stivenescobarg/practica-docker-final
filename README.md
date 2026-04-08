@@ -11,23 +11,11 @@
 Aplicación web completa (Full Stack) contenerizada con Docker y orquestada con Docker Compose.
 
 ### Arquitectura
-┌─────────────────┐
-│   FRONTEND      │  Puerto 80
-│   Angular 19    │  (Nginx)
-│   Nginx         │
-└────────┬────────┘
-│
-▼
-┌─────────────────┐
-│   BACKEND       │  Puerto 3000
-│   NestJS        │  (API REST)
-└────────┬────────┘
-│
-▼
-┌─────────────────┐
-│   DATABASE      │  Puerto 5432
-│   PostgreSQL    │
-└─────────────────┘
+
+**Frontend** → Angular 19 → Nginx → Puerto 80
+**Backend** → NestJS (API REST) → Puerto 3000
+**Database** → PostgreSQL → Puerto 5432.
+
 
 ---
 
@@ -55,6 +43,8 @@ tesloshop-app/
 ├── start.sh                # Script de inicio
 └── stop.sh                 # Script de parada
 
+<img width="993" height="102" alt="image" src="https://github.com/user-attachments/assets/3277032a-4fb8-4174-9895-3a99a0c13c67" />
+
 ---
 
 ## 🚀 Pasos de Ejecución
@@ -64,6 +54,9 @@ tesloshop-app/
 - Docker Desktop instalado
 - Git instalado
 - Puertos 80, 3000 y 5432 disponibles
+
+<img width="916" height="182" alt="image" src="https://github.com/user-attachments/assets/46f9b7b9-9bc9-469d-8c3e-6864a4070f86" />
+
 
 ### 2️⃣ Clonar el Repositorio
 ```bash
@@ -75,9 +68,15 @@ cd tesloshop-app
 
 Ya viene configurado el archivo `.env` con las credenciales necesarias.
 
+<img width="583" height="763" alt="image" src="https://github.com/user-attachments/assets/92f94402-fb74-4f1c-a1d6-bb2a97b09545" />
+
+
 ### 4️⃣ Levantar los Servicios
 ```bash
 docker compose up --build -d
+<img width="819" height="469" alt="image" src="https://github.com/user-attachments/assets/173ddd99-0082-4dad-91c3-4a6d43b9acf9" />
+<img width="558" height="299" alt="image" src="https://github.com/user-attachments/assets/faca0b78-8e58-4354-ad1d-06b00db74c51" />
+
 ```
 
 O usando el script:
@@ -90,10 +89,15 @@ start.sh
 Visitar en el navegador:
 http://localhost:3000/api/seed
 
+<img width="423" height="102" alt="image" src="https://github.com/user-attachments/assets/2150bf2b-801b-4506-a451-58d75c84107a" />
+
+
 ### 6️⃣ Acceder a la Aplicación
 
 - **Frontend:** http://localhost
 - **Backend API:** http://localhost:3000/api
+<img width="1432" height="991" alt="image" src="https://github.com/user-attachments/assets/0e05b4f9-6adf-4f76-b768-8ba3bfc24ff9" />
+<img width="708" height="795" alt="image" src="https://github.com/user-attachments/assets/88841d49-7dda-43c9-b977-1d216ffbf906" />
 
 ---
 
