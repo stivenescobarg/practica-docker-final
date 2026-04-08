@@ -30,18 +30,22 @@ Aplicación web completa (Full Stack) contenerizada con Docker y orquestada con 
 ---
 
 ## 📂 Estructura del Proyecto
-tesloshop-app/
-├── teslo-shop/              # Backend (NestJS)
-│   ├── Dockerfile           # Multi-stage build
-│   └── src/
-├── angular-tesloshop/       # Frontend (Angular)
-│   ├── Dockerfile           # Build + Nginx
-│   ├── nginx.conf           # Configuración proxy
-│   └── src/
-├── docker-compose.yml       # Orquestación
-├── .env                     # Variables de entorno
-├── start.sh                # Script de inicio
-└── stop.sh                 # Script de parada
+**Frontend**
+angular-tesloshop/ (Frontend en Angular)
+Dockerfile (build + Nginx)
+nginx.conf (configuración de proxy)
+src/
+
+**Backend**
+teslo-shop/ (Backend en NestJS)
+Dockerfile (multi-stage build)
+src/
+
+**Base del proyecto**
+docker-compose.yml (orquestación con Docker Compose)
+.env (variables de entorno)
+start.sh (script de inicio)
+stop.sh (script de parada)
 
 <img width="993" height="102" alt="image" src="https://github.com/user-attachments/assets/3277032a-4fb8-4174-9895-3a99a0c13c67" />
 
@@ -200,7 +204,7 @@ docker compose exec backend yarn start:dev
 ## ⚠️ Problemas Encontrados y Soluciones
 
 ### Problema 1:  Variables de entorno para TesloShop .env
-**Solución:** Las variables DB_USERNAME, DB_PASSWORD y DB_NAME DEBEN coincidir exactamente con POSTGRES_USER, POSTGRES_PASSWORD y POSTGRES_DB. Al principio no coincidían y el backend no podía conectarse."
+**Solución:** Las variables DB_USERNAME, DB_PASSWORD y DB_NAME DEBEN coincidir exactamente con POSTGRES_USER, POSTGRES_PASSWORD y POSTGRES_DB. Al principio no coincidían y el backend no podía conectarse.
 
 
 ---
