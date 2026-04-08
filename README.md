@@ -78,10 +78,9 @@ Ya viene configurado el archivo `.env` con las credenciales necesarias.
 ### 4️⃣ Levantar los Servicios
 ```bash
 docker compose up --build -d
+```
 <img width="819" height="469" alt="image" src="https://github.com/user-attachments/assets/173ddd99-0082-4dad-91c3-4a6d43b9acf9" />
 <img width="558" height="299" alt="image" src="https://github.com/user-attachments/assets/faca0b78-8e58-4354-ad1d-06b00db74c51" />
-
-```
 
 O usando el script:
 ```bash
